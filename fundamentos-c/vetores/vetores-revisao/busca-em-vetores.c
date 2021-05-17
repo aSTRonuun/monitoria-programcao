@@ -1,5 +1,14 @@
 #include <stdio.h>
 
+int find(int vet[], int size, int valor){
+    for(int i=0;i<size;i++){
+        if(vet[i]==valor)
+            return i;
+    }
+
+    return -1;
+}
+
 void show(int vet[], int size){
     printf("[");
     for(int i=0;i<size;i++){ 
@@ -14,19 +23,18 @@ void show(int vet[], int size){
 int main(){
 
     int size = 0;
-    scanf("%d", &size);
+    int procurado = 0;
+    scanf("%d %d", &size, &procurado);
     int vet[size];
     for(int i=0;i<size;i++){
         scanf("%d", &vet[i]);
     }
 
-    int invertido[size];
-    int invertido_size = 0;
-
-    for(int i=size-1;i>=0;i--){
-        invertido[invertido_size++] = vet[i];
-    }
+    int pos = find(vet, size, procurado);
+    if(pos == -1)
+        puts("nao existe");
+    else
+        printf("%d\n", pos);
 
     show(vet, size);
-    show(invertido, size);
 }

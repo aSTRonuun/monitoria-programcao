@@ -20,13 +20,11 @@ int main(){
         scanf("%d", &vet[i]);
     }
 
-    int invertido[size];
-    int invertido_size = 0;
-
-    for(int i=size-1;i>=0;i--){
-        invertido[invertido_size++] = vet[i];
+    for(int i=0, j=size-1;i<j;i++,j--){
+        int aux = vet[i];
+        vet[i] = vet[j];
+        vet[j] = aux;
     }
 
     show(vet, size);
-    show(invertido, size);
 }
