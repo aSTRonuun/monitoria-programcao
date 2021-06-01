@@ -1,0 +1,32 @@
+- Dois jogadores vão jogar par ou ímpar.
+- A entrada é composta de
+    - número de casos de teste
+    - para cada caso de teste
+        - a escolha do jogador 1 'p' ou 'i'
+        - o número de dedos do jogador 1
+        - o número de dedos do jogador 2
+- Saída
+    - 'jog1' ou jog2
+
+
+>>>>>>>>>>
+1
+p
+3
+5
+==========
+jog1
+<<<<<<<<<<
+
+>>>>>>>>>>
+2
+i
+3
+10
+i
+4
+2
+=========
+jog1
+jog2
+<<<<<<<<<<
