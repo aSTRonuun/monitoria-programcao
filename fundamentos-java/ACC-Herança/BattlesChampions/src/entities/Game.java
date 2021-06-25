@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
+import entities.Champions.Mage;
 import entities.Champions.Player;
 import entities.Champions.Trol;
 
@@ -15,8 +16,10 @@ public class Game {
 
     public Game(int nTrols){
         this.players = new ArrayList<>();
-        for(int i=0;i<nTrols;i++)
+        for(int i=0;i<nTrols;i++){
             players.add(new Trol());
+        }
+        players.add(new Mage());
         Collections.shuffle(players);
     }
     public void showPlayers(){
